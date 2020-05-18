@@ -30,9 +30,10 @@ def bubble_sort(arr):
 # STRETCH: implement the Count Sort function below
 def count_sort(arr, maximum=-1):
     # Your code here
-    for i in range( len( arr)):     # find true maximum value
-        if arr[i] > maximum:
-            maximum = arr[i]
+    if maximum == -1:               # find true maximum value
+        for i in range( len( arr)):
+            if arr[i] > maximum:
+                maximum = arr[i]
     print( "max value", maximum)
 
     n = 0
